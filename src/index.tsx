@@ -130,7 +130,6 @@ export default forwardRef<ActionSheetRef, ActionSheetProps>(
         scrollOffset?: number;
       };
     }>({});
-    const initialWindowHeight = useRef(Dimensions.get('screen').height);
     const [dimensions, setDimensions] = useState<{
       width: number;
       height: number;
@@ -793,7 +792,7 @@ export default forwardRef<ActionSheetRef, ActionSheetProps>(
                   ? getZIndexFromStack(props.id, contextRef.current)
                   : 999,
                 width: '100%',
-                height: initialWindowHeight.current,
+                height: '100%',
               },
               pointerEvents: props?.backgroundInteractionEnabled
                 ? 'box-none'
