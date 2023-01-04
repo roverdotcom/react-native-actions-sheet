@@ -57,7 +57,6 @@ export default forwardRef(function ActionSheet(_a, ref) {
     var lock = useRef(false);
     var panViewRef = useRef();
     var gestureBoundaries = useRef({});
-    var initialWindowHeight = useRef(Dimensions.get('screen').height);
     var _9 = useState({
         width: Dimensions.get('window').width,
         height: 0,
@@ -614,7 +613,7 @@ export default forwardRef(function ActionSheet(_a, ref) {
                             ? getZIndexFromStack(props.id, contextRef.current)
                             : 999,
                     width: '100%',
-                    height: initialWindowHeight.current
+                    height: '100%'
                 },
                 pointerEvents: (props === null || props === void 0 ? void 0 : props.backgroundInteractionEnabled)
                     ? 'box-none'
